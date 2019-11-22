@@ -5,14 +5,12 @@ import { Router } from '@angular/router'
 @Injectable()
 export class AuthService {
 
-  private _registerUrl = "https://localhost:44372/api/account/register";//"http://localhost:3000/api/register";
-  private _loginUrl = "https://localhost:44372/api/account/login";//"http://localhost:3000/api/login";
-  private _registerMentorUrl = "https://localhost:44372/api/account/register";//"http://localhost:3000/api/mentorRegister";
-  private _loginMentorUrl = "https://localhost:44372/api/account/login";//"http://localhost:3000/api/mentorLogin";
-  private _registerAdminUrl = "http://localhost:3000/api/adminRegister";
-  private _loginAdminUrl = "https://localhost:44372/api/account/login";//"http://localhost:3000/api/adminLogin";
-  private _ = ""
-  public _blockUserUrl ="https://localhost:44372/api/course/blockunblock/"
+  private _registerUrl = "https://localhost:44329/api/account/register";
+  private _loginUrl = "https://localhost:44329/api/account/login";
+  private _registerMentorUrl = "https://localhost:44329/api/account/register";
+  private _loginMentorUrl = "https://localhost:44329/api/account/login";
+  private _loginAdminUrl = "https://localhost:44329/api/account/login";
+  public _blockUserUrl ="https://localhost:44368/api/admin/blockunblock/"
   constructor(private http: HttpClient,
               private _router: Router) { }
 
@@ -44,9 +42,6 @@ export class AuthService {
     this._router.navigate(['/mentor-login'])
   }
 
-  registerAdmin(user) {
-    return this.http.post<any>(this._registerAdminUrl, user)
-  }
 
   loginAdmin(user) {
     return this.http.post<any>(this._loginAdminUrl, user)

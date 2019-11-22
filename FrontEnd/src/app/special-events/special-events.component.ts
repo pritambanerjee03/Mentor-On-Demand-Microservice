@@ -39,7 +39,7 @@ export class SpecialEventsComponent implements OnInit {
     {
       var r =confirm("Are you sure want to pay for the Course?");
     if(r == true){
-      this._eventService.updateEnrolledCourse(updateCourseId,updateCourseUserName,course)
+      this._eventService.updateEnrolledCourseStudent(updateCourseId,updateCourseUserName,course)
       .subscribe(
         res => {
           this._router.navigate(['/events'])

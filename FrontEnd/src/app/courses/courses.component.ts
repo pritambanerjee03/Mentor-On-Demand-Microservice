@@ -26,7 +26,7 @@ export class CoursesComponent implements OnInit {
     {
       var r =confirm("Are you sure?\nYou  want to Accept this student?");
     if(r == true){
-      this._eventService.updateEnrolledCourse(updateCourseId,updateCourseMentorName,course)
+      this._eventService.updateEnrolledCourseMentor(updateCourseId,updateCourseMentorName,course)
       .subscribe(
         res => {
           this._router.navigate(['/ongoingCourses'])
@@ -43,7 +43,7 @@ export class CoursesComponent implements OnInit {
     {
       var r =confirm("Are you sure?\nYou want to Complete the course?");
     if(r == true){
-      this._eventService.updateEnrolledCourse(updateCourseId,updateCourseMentorName,course)
+      this._eventService.updateEnrolledCourseMentor(updateCourseId,updateCourseMentorName,course)
       .subscribe(
         res => {
           this._router.navigate(['/ongoingCourses'])

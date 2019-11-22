@@ -7,23 +7,23 @@ export class EventService {
   public _setCourse:any;
   public _setCourseData:any;
 
-  private _eventsUrl = "https://localhost:44372/api/course";
-  private _specialEventsUrl = "https://localhost:44372/api/enrolledcourse/ListOfCourse/";
-  private _specialEventsUrlAddCourse = "https://localhost:44372/api/enrolledcourse";
-  private _coursesUrl = "https://localhost:44372/api/enrolledcourse/ListOfCourseMentor/";
-  private _deleteCourseUrl = "https://localhost:44372/api/course/";
-  private _addCourseUrl = "https://localhost:44372/api/course";
-  private _updateCourseUrl = "https://localhost:44372/api/course/";
-  private _searchCourseUrl = "https://localhost:44372/api/course/search/";
-  private _getUserListUrlAdminFetch = "https://localhost:44372/api/course/usersList";
-  private _getMentorListUrlAdminFetch = "https://localhost:44372/api/course/mentorsList";
-  private _getMentorListUrl = "https://localhost:44372/api/enrolledcourse";
-  private _updateMentorUrl = "https://localhost:44372/api/course/mentorProfile/";
-  private _updateStudentUrl = "https://localhost:44372/api/course/studentProfile/";
-  private _updateEnrolledCourseUrl = "https://localhost:44372/api/enrolledcourse/ChangeEnrolledCourseStatus/";
-  private _blockUserUrl = "https://localhost:44359/api/admin/blockunblock/";
-  private _mentorProfileUrl = "https://localhost:44372/api/course/mentorProfile/";
-  private _studentProfileUrl = "https://localhost:44372/api/course/studentProfile/";
+  private _eventsUrl = "https://localhost:44319/api/course";
+  private _specialEventsUrl = "https://localhost:44355/api/student/ListOfCourse/";
+  private _specialEventsUrlAddCourse = "https://localhost:44355/api/student";
+  private _coursesUrl = "https://localhost:44355/api/mentor/ListOfCourseMentor/";
+  private _deleteCourseUrl = "https://localhost:44368/api/admin/";
+  private _addCourseUrl = "https://localhost:44368/api/admin";
+  private _updateCourseUrl = "https://localhost:44368/api/admin/";
+  private _searchCourseUrl = "https://localhost:44319/api/course/search/";
+  private _getUserListUrlAdminFetch = "https://localhost:44368/api/admin/usersList";
+  private _getMentorListUrlAdminFetch = "https://localhost:44368/api/admin/mentorsList";
+  private _getMentorListUrl = "https://localhost:44368/api/admin";
+  private _updateMentorUrl = "https://localhost:44355/api/mentor/mentorProfile/";
+  private _updateStudentUrl = "https://localhost:44355/api/student/studentProfile/";
+  private _updateEnrolledCourseStudentUrl = "https://localhost:44355/api/student/ChangeEnrolledCourseStatus/";
+  private _updateEnrolledCourseMentorUrl = "https://localhost:44372/api/student/ChangeEnrolledCourseStatus/";
+  private _mentorProfileUrl = "https://localhost:44372/api/mentor/mentorProfile/";
+  private _studentProfileUrl = "https://localhost:44355/api/student/studentProfile/";
   constructor(private http: HttpClient) { }
 
   getEvents() {
@@ -89,19 +89,12 @@ export class EventService {
     return this.http.get<any>(this._getMentorListUrl)
   }
 
-  updateEnrolledCourse(updateCourseId,updateCourseUserName,course) {
-    return this.http.put<any>(this._updateEnrolledCourseUrl+updateCourseId+'/'+updateCourseUserName,course)
+  updateEnrolledCourseStudent(updateCourseId,updateCourseUserName,course) {
+    return this.http.put<any>(this._updateEnrolledCourseStudentUrl+updateCourseId+'/'+updateCourseUserName,course)
   }
-
-  public blockById(id) {
-    return this.http.get<any>(this._blockUserUrl+id)
-      
+  updateEnrolledCourseMentor(updateCourseId,updateCourseUserName,course) {
+    return this.http.put<any>(this._updateEnrolledCourseMentorUrl+updateCourseId+'/'+updateCourseUserName,course)
   }
-  
-  public unBlockById(id) {
-    return this.http.get<any>(this._blockUserUrl+id)
-  }
-
   getMentorDetails(mentorEmail){
     return this.http.get<any>(this._mentorProfileUrl+mentorEmail)
   }

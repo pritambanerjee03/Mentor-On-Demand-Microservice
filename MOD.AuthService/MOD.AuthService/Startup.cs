@@ -16,8 +16,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using MOD.AuthService.Data;
-using MOD.AuthService.Models;
+using MOD.AuthLibrary;
+using MOD.ModelLibrary;
 using Newtonsoft.Json;
 
 namespace MOD.AuthService
@@ -35,19 +35,15 @@ namespace MOD.AuthService
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddDbContext<MentorOnDemandContext>(options =>
+            services.AddDbContext<AuthContext>(options =>
                 options.UseSqlServer(
                 Configuration.GetConnectionString("SqlConnectionString")));
 
-           services.AddIdentity<MODUser, IdentityRole>()
-                .AddEntityFrameworkStores<MentorOnDemandContext>()
-              .AddDefaultTokenProviders();
+            services.AddIdentity<MODUser, IdentityRole>()
+                 .AddEntityFrameworkStores<AuthContext>()
+               .AddDefaultTokenProviders();
 
             services.AddControllers();
-            services.AddScoped<ICourseRepository,CourseRepository>();
-            services.AddScoped<IAdminRepository, AdminRepository>();
-            services.AddScoped<IMentorRepository, MentorRepository>();
-            services.AddScoped<IStudentRepository, StudentRepository>();
 
             //JWT
             JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();
