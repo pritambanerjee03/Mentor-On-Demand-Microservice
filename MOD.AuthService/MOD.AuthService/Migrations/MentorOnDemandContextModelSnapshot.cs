@@ -133,21 +133,21 @@ namespace MOD.AuthService.Migrations
                         new
                         {
                             Id = "1",
-                            ConcurrencyStamp = "cce22e60-80f6-4f2f-b02c-3a85958559d5",
+                            ConcurrencyStamp = "3a1fa36c-ff70-41fa-a04e-0b4c245262fa",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
                             Id = "2",
-                            ConcurrencyStamp = "37fdb6b2-684b-44e7-a80d-40599b3c369f",
+                            ConcurrencyStamp = "2752e251-ae52-4157-8ba5-e006b4cd9fde",
                             Name = "Mentor",
                             NormalizedName = "Mentor"
                         },
                         new
                         {
                             Id = "3",
-                            ConcurrencyStamp = "51a7da58-1fcd-4fe4-adf3-74ecab4f2b81",
+                            ConcurrencyStamp = "5404133e-057b-4c87-8497-cca199065bc9",
                             Name = "Student",
                             NormalizedName = "Student"
                         });

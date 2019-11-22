@@ -9,9 +9,9 @@ namespace MOD.AuthService.Data
 {
     public interface IMentorRepository
     {
-        object mentorProfileDetails(string email);
-        object GetEnrolledCoursesByMentor(string modelEmail);
-        bool UpdateMentorDetails(ProfileDto mentorData, string mentorId);
-        bool ChangeCourseStatus(EnrolledCourse enrolledCourse, string userEmail);
+        UserDto mentorProfileDetails(string email);
+        List<EnrolledCourse> GetEnrolledCoursesByMentor(string modelEmail);
+        bool ChangeCourseStatus(EnrolledCourse enrolledCourse, string UserEmail);
+        bool UpdateMentorDetails(ProfileDto modUser, string mentorId);
     }
 }

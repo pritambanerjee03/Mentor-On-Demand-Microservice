@@ -70,7 +70,7 @@ namespace MOD.AuthService.Controllers
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
         [HttpGet("usersList")]
-        [Authorize(Roles = "Admin")]
+         [Authorize(Roles = "Admin")]
         public IActionResult GetUsersList()
         {
             return Ok(repository.GetUsersList());
@@ -93,7 +93,7 @@ namespace MOD.AuthService.Controllers
             }
             return StatusCode(StatusCodes.Status500InternalServerError);
         }
-        // GET: api/EnrolledCourse
+        // GET: api/Admin
         [HttpGet]
         [Authorize(Roles = "Admin")]
         public IActionResult GetEnrolledCourses()
@@ -101,37 +101,5 @@ namespace MOD.AuthService.Controllers
             return Ok(repository.GetEnrolledCourses());
         }
 
-
-        // GET: api/Admin
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
-
-        // GET: api/Admin/5
-        [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
-        {
-            return "value";
-        }
-
-        // POST: api/Admin
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT: api/Admin/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

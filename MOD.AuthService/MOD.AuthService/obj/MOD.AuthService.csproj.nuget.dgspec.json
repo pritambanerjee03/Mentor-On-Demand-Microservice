@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\pritam802286\\Mentor On Demand IIHT .Net Core Microservices\\MentorOnDemand.NetCore\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj": {}
+    "E:\\pritam802286\\Mentor On Demand Segregation\\Mentor-On-Demand-Microservice\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj": {}
   },
   "projects": {
-    "E:\\pritam802286\\Mentor On Demand IIHT .Net Core Microservices\\MentorOnDemand.NetCore\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj": {
+    "E:\\pritam802286\\Mentor On Demand Segregation\\Mentor-On-Demand-Microservice\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\pritam802286\\Mentor On Demand IIHT .Net Core Microservices\\MentorOnDemand.NetCore\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj",
+        "projectUniqueName": "E:\\pritam802286\\Mentor On Demand Segregation\\Mentor-On-Demand-Microservice\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj",
         "projectName": "MOD.AuthService",
-        "projectPath": "E:\\pritam802286\\Mentor On Demand IIHT .Net Core Microservices\\MentorOnDemand.NetCore\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj",
-        "packagesPath": "C:\\Users\\meanvilt22\\.nuget\\packages\\",
-        "outputPath": "E:\\pritam802286\\Mentor On Demand IIHT .Net Core Microservices\\MentorOnDemand.NetCore\\MOD.AuthService\\MOD.AuthService\\obj\\",
+        "projectPath": "E:\\pritam802286\\Mentor On Demand Segregation\\Mentor-On-Demand-Microservice\\MOD.AuthService\\MOD.AuthService\\MOD.AuthService.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "E:\\pritam802286\\Mentor On Demand Segregation\\Mentor-On-Demand-Microservice\\MOD.AuthService\\MOD.AuthService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\meanvilt22\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

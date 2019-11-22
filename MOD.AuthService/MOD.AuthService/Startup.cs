@@ -44,7 +44,10 @@ namespace MOD.AuthService
               .AddDefaultTokenProviders();
 
             services.AddControllers();
-            services.AddScoped<IRepository, CourseRepository>();
+            services.AddScoped<ICourseRepository,CourseRepository>();
+            services.AddScoped<IAdminRepository, AdminRepository>();
+            services.AddScoped<IMentorRepository, MentorRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
 
             //JWT
             JwtSecurityTokenHandler.DefaultOutboundClaimTypeMap.Clear();

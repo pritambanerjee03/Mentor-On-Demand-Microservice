@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOD.AuthService", "MOD.AuthService\MOD.AuthService.csproj", "{3BDE5650-734B-4989-851A-BA9EC47E1E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MOD.AuthService", "MOD.AuthService\MOD.AuthService.csproj", "{3BDE5650-734B-4989-851A-BA9EC47E1E91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MOD.ApiGateway", "MOD.ApiGateway\MOD.ApiGateway.csproj", "{39E85CF2-C8B1-4F4E-AEA8-A38635D8118D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3BDE5650-734B-4989-851A-BA9EC47E1E91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BDE5650-734B-4989-851A-BA9EC47E1E91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BDE5650-734B-4989-851A-BA9EC47E1E91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39E85CF2-C8B1-4F4E-AEA8-A38635D8118D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39E85CF2-C8B1-4F4E-AEA8-A38635D8118D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39E85CF2-C8B1-4F4E-AEA8-A38635D8118D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39E85CF2-C8B1-4F4E-AEA8-A38635D8118D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

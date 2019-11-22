@@ -16,8 +16,8 @@ namespace MOD.AuthService.Controllers
     [ApiController]
     public class CourseController : ControllerBase
     {
-        IRepository repository;
-        public CourseController(IRepository repository)
+        ICourseRepository repository;
+        public CourseController(ICourseRepository repository)
         {
             this.repository = repository;
         }
@@ -28,9 +28,6 @@ namespace MOD.AuthService.Controllers
         {
            return Ok(repository.GetCourses());
         }
-
-       
-
         [HttpGet("search/{criteria}")]
         public IActionResult SearchCourse(string criteria)
         {
@@ -38,8 +35,5 @@ namespace MOD.AuthService.Controllers
             return Ok(result);
         }
 
-        
-
-       
     }
 }

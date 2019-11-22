@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MOD.AuthService.Dtos;
 using MOD.AuthService.Model;
+using MOD.AuthService.Models;
 
 namespace MOD.AuthService.Data
 {
@@ -10,11 +12,11 @@ namespace MOD.AuthService.Data
     {
         bool AddCourses(Course course);
         bool UpdateCourse(Course course);
-        object GetCourse(int id);
-        bool DeleteCourse(object course);
-        object GetUsersList();
-        object GetMentorsList();
-        object BlockUser(string id);
-        object GetEnrolledCourses();
+        Course GetCourse(int id);
+        bool DeleteCourse(Course course);
+        IEnumerable<UserDto> GetMentorsList();
+        IEnumerable<UserDto> GetUsersList();
+        bool BlockUser(string id);
+        IEnumerable<EnrolledCourse> GetEnrolledCourses();
     }
 }
