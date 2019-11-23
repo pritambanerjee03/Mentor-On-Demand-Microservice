@@ -42,7 +42,17 @@ export class SpecialEventsComponent implements OnInit {
       this._eventService.updateEnrolledCourseStudent(updateCourseId,updateCourseUserName,course)
       .subscribe(
         res => {
-          this._router.navigate(['/events'])
+          this._eventService.getSpecialEvents(this._authService.loggedInUserName())
+      .subscribe(
+        res => this.specialEvents = res,
+        err => {
+          if( err instanceof HttpErrorResponse ) {
+            if (err.status === 401) {
+              this._router.navigate(['/login'])
+            }
+          }
+        }
+      )
         } ,
         
         err => {  }

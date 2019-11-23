@@ -29,7 +29,11 @@ export class CoursesComponent implements OnInit {
       this._eventService.updateEnrolledCourseMentor(updateCourseId,updateCourseMentorName,course)
       .subscribe(
         res => {
-          this._router.navigate(['/ongoingCourses'])
+          this._eventService.getCourses(this._authService. loggedInMentorName())
+    .subscribe(
+      res => this.courses = res,
+      err => console.log(err),
+    )
         } ,
         
         err => {  }
@@ -46,7 +50,11 @@ export class CoursesComponent implements OnInit {
       this._eventService.updateEnrolledCourseMentor(updateCourseId,updateCourseMentorName,course)
       .subscribe(
         res => {
-          this._router.navigate(['/ongoingCourses'])
+          this._eventService.getCourses(this._authService. loggedInMentorName())
+    .subscribe(
+      res => this.courses = res,
+      err => console.log(err),
+    )
         } ,
         
         err => {  }

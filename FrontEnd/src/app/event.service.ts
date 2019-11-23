@@ -16,7 +16,7 @@ export class EventService {
   private _specialEventsUrlAddCourse = this._baseStudentUrl;
   private _coursesUrl = this._baseMentorUrl+"/ListOfCourseMentor/";
   private _deleteCourseUrl = this._baseAdminUrl+"/";
-  private _addCourseUrl = this._baseAdminUrl;
+  private _addCourseUrl = this._baseAdminUrl; 
   private _updateCourseUrl = this._baseAdminUrl+"/";
   private _searchCourseUrl = this._baseCourseUrl+"/search/";
   private _getUserListUrlAdminFetch = this._baseAdminUrl+"/usersList";
