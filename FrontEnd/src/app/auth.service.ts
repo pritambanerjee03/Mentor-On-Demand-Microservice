@@ -4,13 +4,14 @@ import { Router } from '@angular/router'
 
 @Injectable()
 export class AuthService {
-
-  private _registerUrl = "https://localhost:44329/api/account/register";
-  private _loginUrl = "https://localhost:44329/api/account/login";
-  private _registerMentorUrl = "https://localhost:44329/api/account/register";
-  private _loginMentorUrl = "https://localhost:44329/api/account/login";
-  private _loginAdminUrl = "https://localhost:44329/api/account/login";
-  public _blockUserUrl ="https://localhost:44368/api/admin/blockunblock/"
+  private _baseUrl ="https://localhost:44370/accountservice";
+  private _baseAdminUrl="https://localhost:44370/adminservice";
+  private _registerUrl = this._baseUrl+"/register";
+  private _loginUrl = this._baseUrl+"/login";
+  private _registerMentorUrl = this._baseUrl+"/register";
+  private _loginMentorUrl = this._baseUrl+"/login";
+  private _loginAdminUrl = this._baseUrl+"/login";
+  public _blockUserUrl =this._baseAdminUrl+"/blockunblock/";
   constructor(private http: HttpClient,
               private _router: Router) { }
 

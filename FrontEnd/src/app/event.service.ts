@@ -6,24 +6,28 @@ export class EventService {
 
   public _setCourse:any;
   public _setCourseData:any;
+  private _baseAdminUrl="https://localhost:44370/adminservice";
+  private _baseMentorUrl="https://localhost:44370/mentorservice";
+  private _baseStudentUrl="https://localhost:44370/studentservice";
+  private _baseCourseUrl="https://localhost:44370/courseservice";
 
-  private _eventsUrl = "https://localhost:44319/api/course";
-  private _specialEventsUrl = "https://localhost:44355/api/student/ListOfCourse/";
-  private _specialEventsUrlAddCourse = "https://localhost:44355/api/student";
-  private _coursesUrl = "https://localhost:44355/api/mentor/ListOfCourseMentor/";
-  private _deleteCourseUrl = "https://localhost:44368/api/admin/";
-  private _addCourseUrl = "https://localhost:44368/api/admin";
-  private _updateCourseUrl = "https://localhost:44368/api/admin/";
-  private _searchCourseUrl = "https://localhost:44319/api/course/search/";
-  private _getUserListUrlAdminFetch = "https://localhost:44368/api/admin/usersList";
-  private _getMentorListUrlAdminFetch = "https://localhost:44368/api/admin/mentorsList";
-  private _getMentorListUrl = "https://localhost:44368/api/admin";
-  private _updateMentorUrl = "https://localhost:44355/api/mentor/mentorProfile/";
-  private _updateStudentUrl = "https://localhost:44355/api/student/studentProfile/";
-  private _updateEnrolledCourseStudentUrl = "https://localhost:44355/api/student/ChangeEnrolledCourseStatus/";
-  private _updateEnrolledCourseMentorUrl = "https://localhost:44372/api/student/ChangeEnrolledCourseStatus/";
-  private _mentorProfileUrl = "https://localhost:44372/api/mentor/mentorProfile/";
-  private _studentProfileUrl = "https://localhost:44355/api/student/studentProfile/";
+  private _eventsUrl = this._baseCourseUrl;
+  private _specialEventsUrl = this._baseStudentUrl+"/ListOfCourse/";
+  private _specialEventsUrlAddCourse = this._baseStudentUrl;
+  private _coursesUrl = this._baseMentorUrl+"/ListOfCourseMentor/";
+  private _deleteCourseUrl = this._baseAdminUrl+"/";
+  private _addCourseUrl = this._baseAdminUrl;
+  private _updateCourseUrl = this._baseAdminUrl+"/";
+  private _searchCourseUrl = this._baseCourseUrl+"/search/";
+  private _getUserListUrlAdminFetch = this._baseAdminUrl+"/usersList";
+  private _getMentorListUrlAdminFetch = this._baseAdminUrl+"/mentorsList";
+  private _getMentorListUrl = this._baseAdminUrl;
+  private _updateMentorUrl = this._baseMentorUrl+"/mentorProfile/";
+  private _updateStudentUrl = this._baseStudentUrl+"/studentProfile/";
+  private _updateEnrolledCourseStudentUrl = this._baseStudentUrl+"/ChangeEnrolledCourseStatus/";
+  private _updateEnrolledCourseMentorUrl = this._baseMentorUrl+"/ChangeEnrolledCourseStatus/";
+  private _mentorProfileUrl = this._baseMentorUrl+"/mentorProfile/";
+  private _studentProfileUrl = this._baseStudentUrl+"/studentProfile/";
   constructor(private http: HttpClient) { }
 
   getEvents() {

@@ -30,7 +30,6 @@ namespace MOD.ApiGateway
             services.AddCors();
             services.AddControllers();
             services.AddOcelot();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -42,16 +41,19 @@ namespace MOD.ApiGateway
             }
 
             app.UseHttpsRedirection();
-            app.UseCors(policy =>
-                        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
-            app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseCors(policy => policy.AllowAnyMethod()
+           .AllowAnyHeader()
+           .AllowAnyOrigin());
+
+            app.UseRouting();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+
             await app.UseOcelot();
         }
     }
