@@ -6,17 +6,17 @@ export class EventService {
 
   public _setCourse:any;
   public _setCourseData:any;
-  private _baseAdminUrl="http://localhost:9092/adminservice";
-  private _baseMentorUrl="http://localhost:9093/mentorservice";
-  private _baseStudentUrl="http://localhost:9094/studentservice";
-  private _baseCourseUrl="http://localhost:9095/courseservice";
+  private _baseAdminUrl="http://localhost:9090/adminservice";
+  private _baseMentorUrl="http://localhost:9090/mentorservice";
+  private _baseStudentUrl="http://localhost:9090/studentservice";
+  private _baseCourseUrl="http://localhost:9090/courseservice";
 
   private _eventsUrl = this._baseCourseUrl;
   private _specialEventsUrl = this._baseStudentUrl+"/ListOfCourse/";
   private _specialEventsUrlAddCourse = this._baseStudentUrl;
   private _coursesUrl = this._baseMentorUrl+"/ListOfCourseMentor/";
   private _deleteCourseUrl = this._baseAdminUrl+"/";
-  private _addCourseUrl = this._baseAdminUrl; 
+  private _addCourseUrl = this._baseAdminUrl;
   private _updateCourseUrl = this._baseAdminUrl+"/";
   private _searchCourseUrl = this._baseCourseUrl+"/search/";
   private _getUserListUrlAdminFetch = this._baseAdminUrl+"/usersList";

@@ -43,8 +43,8 @@ namespace MOD.ApiGateway
             app.UseHttpsRedirection();
 
             app.UseCors(policy => policy.AllowAnyMethod()
-           .AllowAnyHeader()
-           .AllowAnyOrigin());
+                       .AllowAnyHeader()
+                       .AllowAnyOrigin());
 
             app.UseRouting();
             //app.UseAuthorization();
