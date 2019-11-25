@@ -11,7 +11,7 @@
             <p class="card-text">Course Fee: {{course.courseFee}}</p>
             <p class="card-text">Course Id : {{course.id}}</p>
             <p class="card-text">Student Id: {{course.studentEmail}}</p>
-            <button type="button" class="btn btn-success" (click)="updateEnrolledCourse(course.id,_authService.loggedInMentorName(),course)">{{course.status}}</button>
+            <button type="button" class="btn btn-success" (click)="updateEnrolledCourse(course.id,_authService.loggedInMentorName(),course)" data-toggle="tooltip" data-placement="bottom" title="Click To Change Status!">{{course.status}}</button>
             
           </div>
           <div class="card-footer text-muted">
@@ -23,6 +23,11 @@
   </div>
 </div>
 </div> 
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+  </script>
 
 
 
