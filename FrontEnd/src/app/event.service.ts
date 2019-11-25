@@ -6,10 +6,10 @@ export class EventService {
 
   public _setCourse:any;
   public _setCourseData:any;
-  private _baseAdminUrl="https://localhost:44370/adminservice";
-  private _baseMentorUrl="https://localhost:44370/mentorservice";
-  private _baseStudentUrl="https://localhost:44370/studentservice";
-  private _baseCourseUrl="https://localhost:44370/courseservice";
+  private _baseAdminUrl="http://localhost:9092/adminservice";
+  private _baseMentorUrl="http://localhost:9093/mentorservice";
+  private _baseStudentUrl="http://localhost:9094/studentservice";
+  private _baseCourseUrl="http://localhost:9095/courseservice";
 
   private _eventsUrl = this._baseCourseUrl;
   private _specialEventsUrl = this._baseStudentUrl+"/ListOfCourse/";

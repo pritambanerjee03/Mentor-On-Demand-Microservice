@@ -4,8 +4,8 @@ import { Router } from '@angular/router'
 
 @Injectable()
 export class AuthService {
-  private _baseUrl ="https://localhost:44370/accountservice";
-  private _baseAdminUrl="https://localhost:44370/adminservice";
+  private _baseUrl ="http://localhost:9091/accountservice";
+  private _baseAdminUrl="http://localhost:9092/adminservice";
   private _registerUrl = this._baseUrl+"/register";
   private _loginUrl = this._baseUrl+"/login";
   private _registerMentorUrl = this._baseUrl+"/register";
