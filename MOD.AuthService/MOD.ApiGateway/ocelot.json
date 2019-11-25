@@ -83,7 +83,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9094
+          "Port": 9095
         }
       ],
       "UpstreamPathTemplate": "/courseservice"
@@ -94,7 +94,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 9094
+          "Port": 9095
         }
       ],
       "UpstreamPathTemplate": "/courseservice/{catchAll}"
